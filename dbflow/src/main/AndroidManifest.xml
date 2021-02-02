@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atom.dbflow">
+
+    <application>
+        <activity android:name=".DBFlowActivity">
+        </activity>
+    </application>
+</manifest>

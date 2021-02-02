@@ -1,0 +1,4 @@
+include ':dbflow-other-db'
+include ':dbflow'
+include ':app'
+rootProject.name = "TestDB"

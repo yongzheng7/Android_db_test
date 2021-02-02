@@ -1,0 +1,79 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.3.72"
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.atom.plugin:saop-plugin:3.0.0'
+        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.10'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://www.jitpack.io" }//DBFlow maven 仓库
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext{
+    // 版本号相关
+    versionCode = 1
+    versionName = '1.0.0'
+
+    compileSdkVersion = 30
+    buildToolsVersion = '30.0.2'
+
+    minSdkVersion = 19
+    targetSdkVersion = 30
+
+    applicationId = 'com.wyz.im'
+
+    // Android
+    appcompatVersion = '1.1.0'
+    constraintlayoutVersion = '1.1.3'
+    core_ktxVersion = '1.3.1'
+    // 相关依赖库版本
+    supportVersion = '30+'
+    butterknifeVersion = '10.2.1'
+
+    circleimageviewVersion = '3.1.0'
+    glideVersion = '4.11.0'
+    ucropVersion = '2.2.0-native'
+    easyPMVersion = '3.0.0'
+    geniusVersion = '2.0.0'
+    ossVersion = '+'
+
+    gsonVersion = '2.8.5'
+    retrofitVersion = '2.1.0'
+    // 个推
+    getuiVersion = '2.14.1.0'
+    GETUI_APP_ID = 'tmM9C5lUBm6kjqPwBFiqP3'
+    GETUI_APP_KEY = '4gNp2vcTfQ9f6ikHfSAxY5'
+    GETUI_APP_SECRET = 'gkKTvqSQ3WAU0pcpXytP32'
+    // 数据库
+    dbflowVersion = '4.2.4'
+
+    airpanelVersion = '1.1.0'
+
+    multidex = '1.0.3'
+
+    // bug frame
+    crashreport = '3.2.422'
+    nativecrashreport = '3.7.5'
+
+    // pick picture
+    picture_library = 'v2.6.0'
+}
